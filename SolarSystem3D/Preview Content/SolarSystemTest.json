@@ -1,0 +1,121 @@
+[
+    {
+        "id": 3,
+        "name": "Venus",
+        "diameter_km": 12104,
+        "average_temperature_celsius": 464,
+        "water_percentage": 0,
+        "number_of_satellites": 0,
+        "satellites":
+        [],
+        "distance_from_sun_km": 108200000,
+        "orbital_period_days": 224.7,
+        "rotation_period_hours": 5832.5,
+        "atmosphere_composition":
+        [
+            {
+                "element": "carbon_dioxide",
+                "percentage": 96.5
+            },
+            {
+                "element": "nitrogen",
+                "percentage": 3.5
+            }
+        ],
+        "description": "Venus es el segundo planeta del sistema solar y tiene una atmósfera densa y tóxica compuesta principalmente de dióxido de carbono, lo que lo convierte en el planeta más caliente. Su superficie está marcada por volcanes y montañas.",
+        "scale":
+        [
+            0.008699151933304585,
+            0.008699151933304585,
+            0.008699151933304585
+        ],
+        "order": 2,
+        "position_z": 4.81,
+        "model3d": "Venus"
+    },
+    {
+        "id": 4,
+        "name": "Tierra",
+        "diameter_km": 12742,
+        "average_temperature_celsius": 15,
+        "water_percentage": 71,
+        "number_of_satellites": 1,
+        "satellites":
+        [
+            "Luna"
+        ],
+        "distance_from_sun_km": 149600000,
+        "orbital_period_days": 365.25,
+        "rotation_period_hours": 24,
+        "atmosphere_composition":
+        [
+            {
+                "element": "nitrogen",
+                "percentage": 78
+            },
+            {
+                "element": "oxygen",
+                "percentage": 21
+            },
+            {
+                "element": "other",
+                "percentage": 1
+            }
+        ],
+        "description": "La Tierra es el tercer planeta del sistema solar y el único conocido que alberga vida. Tiene una superficie cubierta en su mayoría por agua y una atmósfera rica en oxígeno. La Tierra posee un satélite natural, la Luna, que influye en las mareas y en diversos aspectos del clima y la vida en el planeta.",
+        "scale":
+        [
+            0.009157682909299986,
+            0.009157682909299986,
+            0.009157682909299986
+        ],
+        "order": 3,
+        "position_z": 6.66,
+        "model3d": "Earth"
+    },
+    {
+        "id": 5,
+        "name": "Marte",
+        "diameter_km": 6779,
+        "average_temperature_celsius": -60,
+        "water_percentage": 0.03,
+        "number_of_satellites": 2,
+        "satellites":
+        [
+            "Fobos",
+            "Deimos"
+        ],
+        "distance_from_sun_km": 227900000,
+        "orbital_period_days": 687,
+        "rotation_period_hours": 24.6,
+        "atmosphere_composition":
+        [
+            {
+                "element": "carbon_dioxide",
+                "percentage": 95.3
+            },
+            {
+                "element": "nitrogen",
+                "percentage": 2.7
+            },
+            {
+                "element": "argon",
+                "percentage": 1.6
+            },
+            {
+                "element": "other",
+                "percentage": 0.4
+            }
+        ],
+        "description": "Marte es conocido como el planeta rojo debido a su color característico. Es el cuarto planeta del sistema solar y tiene dos pequeños satélites naturales: Fobos y Deimos. Su atmósfera es delgada y compuesta principalmente de dióxido de carbono.",
+        "scale":
+        [
+            0.004872071295098462,
+            0.004872071295098462,
+            0.004872071295098462
+        ],
+        "order": 4,
+        "position_z": 10.14,
+        "model3d": "Mars"
+    }
+]

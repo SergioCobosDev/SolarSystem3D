@@ -7,20 +7,38 @@
 
 import SwiftUI
 import RealityKit
-import RealityKitContent
 
 struct ContentView: View {
+    @State var planetsVM = PlanetsViewModel()
+    
+    @State private var selectedPlanet: PlanetModel?
+    
     var body: some View {
-        VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
-
-            Text("Hello, world!")
+        NavigationSplitView {
+            List(selection: $selectedPlanet) {
+                ForEach(planetsVM.planets) { planet in
+                    Text(planet.name)
+                        .tag(planet)
+                }
+            }
+            .navigationTitle("Planets")
+            .navigationSplitViewColumnWidth(200)
+        } content: {
+            if let selectedPlanet {
+                PlanetDetail(selectedPlanet: selectedPlanet)
+            } else {
+                Text("Select a planet from the list.")
+            }
+        } detail: {
+            
         }
-        .padding()
+        .alert("App Error",
+               isPresented: $planetsVM.showAlert) {} message: {
+            Text(planetsVM.errorMsg)
+        }
     }
 }
 
 #Preview(windowStyle: .automatic) {
-    ContentView()
+    ContentView.preview
 }

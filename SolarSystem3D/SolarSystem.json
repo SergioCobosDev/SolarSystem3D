@@ -1,0 +1,596 @@
+[
+    {
+        "name": "Sol",
+        "diameter_km": 1391400,
+        "average_temperature_celsius": 5505,
+        "water_percentage": 0,
+        "number_of_satellites": 0,
+        "satellites": [],
+        "distance_from_sun_km": 0,
+        "orbital_period_days": 0,
+        "rotation_period_hours": 609.12,
+        "atmosphere_composition": [
+            {
+                "element": "hydrogen",
+                "percentage": 74.9
+            },
+            {
+                "element": "helium",
+                "percentage": 23.8
+            },
+            {
+                "element": "other",
+                "percentage": 1.3
+            }
+        ],
+        "description": "El Sol es la estrella en el centro del sistema solar y la fuente principal de luz y energía para todos los planetas. Compuesto principalmente de hidrógeno y helio, el Sol es una enorme esfera de plasma que genera energía a través de la fusión nuclear en su núcleo.",
+        "scale": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "order": 0,
+        "position_z": 0.0,
+        "model3d": "Sun",
+        "id": 1
+    },
+    {
+        "name": "Mercurio",
+        "diameter_km": 4879,
+        "average_temperature_celsius": 167,
+        "water_percentage": 0,
+        "number_of_satellites": 0,
+        "satellites": [],
+        "distance_from_sun_km": 57900000,
+        "orbital_period_days": 88,
+        "rotation_period_hours": 1407.6,
+        "atmosphere_composition": [
+            {
+                "element": "oxygen",
+                "percentage": 42
+            },
+            {
+                "element": "sodium",
+                "percentage": 29
+            },
+            {
+                "element": "hydrogen",
+                "percentage": 22
+            },
+            {
+                "element": "helium",
+                "percentage": 6
+            },
+            {
+                "element": "potassium",
+                "percentage": 0.5
+            },
+            {
+                "element": "other",
+                "percentage": 0.5
+            }
+        ],
+        "description": "Mercurio es el planeta más cercano al Sol y el más pequeño del sistema solar. Tiene temperaturas extremas y una superficie llena de cráteres. Carece de satélites naturales y tiene una atmósfera muy delgada compuesta principalmente de oxígeno y sodio.",
+        "scale": [
+            0.003506540175362943,
+            0.003506540175362943,
+            0.003506540175362943
+        ],
+        "order": 1,
+        "position_z": 2.58,
+        "model3d": "Mercury",
+        "id": 2
+    },
+    {
+        "name": "Venus",
+        "diameter_km": 12104,
+        "average_temperature_celsius": 464,
+        "water_percentage": 0,
+        "number_of_satellites": 0,
+        "satellites": [],
+        "distance_from_sun_km": 108200000,
+        "orbital_period_days": 224.7,
+        "rotation_period_hours": 5832.5,
+        "atmosphere_composition": [
+            {
+                "element": "carbon_dioxide",
+                "percentage": 96.5
+            },
+            {
+                "element": "nitrogen",
+                "percentage": 3.5
+            }
+        ],
+        "description": "Venus es el segundo planeta del sistema solar y tiene una atmósfera densa y tóxica compuesta principalmente de dióxido de carbono, lo que lo convierte en el planeta más caliente. Su superficie está marcada por volcanes y montañas.",
+        "scale": [
+            0.008699151933304585,
+            0.008699151933304585,
+            0.008699151933304585
+        ],
+        "order": 2,
+        "position_z": 4.81,
+        "model3d": "Venus",
+        "id": 3
+    },
+    {
+        "name": "Tierra",
+        "diameter_km": 12742,
+        "average_temperature_celsius": 15,
+        "water_percentage": 71,
+        "number_of_satellites": 1,
+        "satellites": [
+            "Luna"
+        ],
+        "distance_from_sun_km": 149600000,
+        "orbital_period_days": 365.25,
+        "rotation_period_hours": 24,
+        "atmosphere_composition": [
+            {
+                "element": "nitrogen",
+                "percentage": 78
+            },
+            {
+                "element": "oxygen",
+                "percentage": 21
+            },
+            {
+                "element": "other",
+                "percentage": 1
+            }
+        ],
+        "description": "La Tierra es el tercer planeta del sistema solar y el único conocido que alberga vida. Tiene una superficie cubierta en su mayoría por agua y una atmósfera rica en oxígeno. La Tierra posee un satélite natural, la Luna, que influye en las mareas y en diversos aspectos del clima y la vida en el planeta.",
+        "scale": [
+            0.009157682909299986,
+            0.009157682909299986,
+            0.009157682909299986
+        ],
+        "order": 3,
+        "position_z": 6.66,
+        "model3d": "Earth",
+        "id": 4
+    },
+    {
+        "name": "Marte",
+        "diameter_km": 6779,
+        "average_temperature_celsius": -60,
+        "water_percentage": 0.03,
+        "number_of_satellites": 2,
+        "satellites": [
+            "Fobos",
+            "Deimos"
+        ],
+        "distance_from_sun_km": 227900000,
+        "orbital_period_days": 687,
+        "rotation_period_hours": 24.6,
+        "atmosphere_composition": [
+            {
+                "element": "carbon_dioxide",
+                "percentage": 95.3
+            },
+            {
+                "element": "nitrogen",
+                "percentage": 2.7
+            },
+            {
+                "element": "argon",
+                "percentage": 1.6
+            },
+            {
+                "element": "other",
+                "percentage": 0.4
+            }
+        ],
+        "description": "Marte es conocido como el planeta rojo debido a su color característico. Es el cuarto planeta del sistema solar y tiene dos pequeños satélites naturales: Fobos y Deimos. Su atmósfera es delgada y compuesta principalmente de dióxido de carbono.",
+        "scale": [
+            0.004872071295098462,
+            0.004872071295098462,
+            0.004872071295098462
+        ],
+        "order": 4,
+        "position_z": 10.14,
+        "model3d": "Mars",
+        "id": 5
+    },
+    {
+        "name": "Júpiter",
+        "diameter_km": 139820,
+        "average_temperature_celsius": -108,
+        "water_percentage": 0,
+        "number_of_satellites": 79,
+        "satellites": [
+            "Adrastea",
+            "Aitne",
+            "Amalthea",
+            "Ananke",
+            "Aoede",
+            "Arche",
+            "Autonoe",
+            "Callirrhoe",
+            "Callisto",
+            "Carme",
+            "Carpo",
+            "Chaldene",
+            "Cyllene",
+            "Dia",
+            "Elara",
+            "Erinome",
+            "Euanthe",
+            "Eukelade",
+            "Eurydome",
+            "Europa",
+            "Ganymede",
+            "Harpalyke",
+            "Hegemone",
+            "Helike",
+            "Himalia",
+            "Io",
+            "Iocaste",
+            "Isonoe",
+            "Kale",
+            "Kallichore",
+            "Kalyke",
+            "Kore",
+            "Leda",
+            "Lysithea",
+            "Megaclite",
+            "Metis",
+            "Mneme",
+            "Orthosie",
+            "Pasiphae",
+            "Pasithee",
+            "Philophrosyne",
+            "Praxidike",
+            "S/2003 J 2",
+            "S/2003 J 3",
+            "S/2003 J 4",
+            "S/2003 J 9",
+            "S/2003 J 10",
+            "S/2003 J 12",
+            "S/2003 J 15",
+            "S/2003 J 16",
+            "S/2003 J 18",
+            "S/2003 J 19",
+            "S/2003 J 23",
+            "S/2010 J 1",
+            "S/2010 J 2",
+            "S/2011 J 1",
+            "S/2011 J 2",
+            "S/2016 J 1",
+            "S/2016 J 2",
+            "S/2017 J 1",
+            "S/2017 J 2",
+            "S/2017 J 3",
+            "S/2017 J 4",
+            "S/2017 J 5",
+            "S/2017 J 6",
+            "S/2017 J 7",
+            "S/2017 J 8",
+            "S/2018 J 1",
+            "S/2018 J 2",
+            "S/2018 J 3",
+            "S/2018 J 4",
+            "S/2018 J 5",
+            "S/2018 J 6",
+            "S/2018 J 7",
+            "S/2018 J 8",
+            "S/2018 J 9",
+            "S/2018 J 10",
+            "S/2018 J 11",
+            "S/2018 J 12",
+            "Sinope",
+            "Thebe",
+            "Themisto",
+            "Taygete",
+            "Thyone"
+        ],
+        "distance_from_sun_km": 778500000,
+        "orbital_period_days": 4331,
+        "rotation_period_hours": 9.9,
+        "atmosphere_composition": [
+            {
+                "element": "hydrogen",
+                "percentage": 89.8
+            },
+            {
+                "element": "helium",
+                "percentage": 10.2
+            }
+        ],
+        "description": "Júpiter es el planeta más grande del sistema solar y tiene una atmósfera compuesta principalmente de hidrógeno y helio. Tiene una gran cantidad de satélites, incluyendo los cuatro grandes satélites galileanos: Io, Europa, Ganimedes y Calisto.",
+        "scale": [
+            0.10048871640074745,
+            0.10048871640074745,
+            0.10048871640074745
+        ],
+        "order": 5,
+        "position_z": 34.68,
+        "model3d": "Jupiter",
+        "id": 6
+    },
+    {
+        "name": "Saturno",
+        "diameter_km": 116460,
+        "average_temperature_celsius": -139,
+        "water_percentage": 0,
+        "number_of_satellites": 83,
+        "satellites": [
+            "Aegir",
+            "Aegle",
+            "Aitne",
+            "Albiorix",
+            "Ananke",
+            "Anthe",
+            "Atlas",
+            "Bebhionn",
+            "Bergelmir",
+            "Bestla",
+            "Caldene",
+            "Calypso",
+            "Daphnis",
+            "Dione",
+            "Enceladus",
+            "Epimetheus",
+            "Erriapus",
+            "Farbauti",
+            "Fenrir",
+            "Fornjot",
+            "Greip",
+            "Hati",
+            "Helene",
+            "Herse",
+            "Hyrrokkin",
+            "Iapetus",
+            "Ijiraq",
+            "Kari",
+            "Kiviuq",
+            "Loge",
+            "Methone",
+            "Mimas",
+            "Mundilfari",
+            "Narvi",
+            "Paaliaq",
+            "Pandora",
+            "Phoebe",
+            "Polydeuces",
+            "Prometheus",
+            "Rhea",
+            "S/2004 S 12",
+            "S/2004 S 13",
+            "S/2004 S 17",
+            "S/2004 S 20",
+            "S/2004 S 21",
+            "S/2006 S 1",
+            "S/2006 S 3",
+            "S/2007 S 2",
+            "S/2007 S 3",
+            "S/2009 S 1",
+            "S/2019 S 1",
+            "S/2019 S 2",
+            "S/2019 S 3",
+            "S/2019 S 4",
+            "S/2019 S 5",
+            "S/2019 S 6",
+            "S/2019 S 7",
+            "S/2019 S 8",
+            "S/2019 S 9",
+            "S/2019 S 10",
+            "S/2019 S 11",
+            "S/2020 S 1",
+            "S/2020 S 2",
+            "S/2020 S 3",
+            "S/2020 S 4",
+            "S/2020 S 5",
+            "S/2020 S 6",
+            "S/2020 S 7",
+            "S/2020 S 8",
+            "S/2020 S 9",
+            "S/2020 S 10",
+            "S/2020 S 11",
+            "S/2020 S 12",
+            "S/2020 S 13",
+            "S/2020 S 14",
+            "S/2020 S 15",
+            "S/2020 S 16",
+            "S/2020 S 17",
+            "S/2020 S 18",
+            "S/2020 S 19",
+            "S/2020 S 20",
+            "S/2020 S 21",
+            "S/2020 S 22",
+            "S/2020 S 23",
+            "S/2020 S 24",
+            "S/2020 S 25",
+            "S/2020 S 26",
+            "S/2020 S 27",
+            "S/2020 S 28",
+            "S/2020 S 29",
+            "S/2020 S 30",
+            "S/2020 S 31",
+            "S/2020 S 32",
+            "S/2020 S 33",
+            "S/2020 S 34",
+            "S/2020 S 35",
+            "S/2020 S 36",
+            "S/2020 S 37",
+            "S/2020 S 38",
+            "S/2020 S 39",
+            "S/2020 S 40",
+            "S/2020 S 41",
+            "S/2020 S 42",
+            "S/2020 S 43",
+            "S/2020 S 44",
+            "S/2020 S 45",
+            "S/2020 S 46",
+            "S/2020 S 47",
+            "S/2020 S 48",
+            "S/2020 S 49",
+            "S/2020 S 50",
+            "S/2020 S 51",
+            "S/2020 S 52",
+            "S/2020 S 53",
+            "S/2020 S 54",
+            "S/2020 S 55",
+            "S/2020 S 56",
+            "S/2020 S 57",
+            "S/2020 S 58",
+            "S/2020 S 59",
+            "S/2020 S 60",
+            "S/2020 S 61",
+            "S/2020 S 62",
+            "S/2020 S 63",
+            "S/2020 S 64",
+            "S/2020 S 65",
+            "S/2020 S 66",
+            "S/2020 S 67",
+            "S/2020 S 68",
+            "S/2020 S 69",
+            "S/2020 S 70",
+            "S/2020 S 71",
+            "S/2020 S 72",
+            "S/2020 S 73",
+            "S/2020 S 74",
+            "S/2020 S 75",
+            "S/2020 S 76",
+            "S/2020 S 77",
+            "S/2020 S 78",
+            "S/2020 S 79",
+            "S/2020 S 80",
+            "S/2020 S 81",
+            "S/2020 S 82",
+            "S/2020 S 83"
+        ],
+        "distance_from_sun_km": 1433000000,
+        "orbital_period_days": 10747,
+        "rotation_period_hours": 10.7,
+        "atmosphere_composition": [
+            {
+                "element": "hydrogen",
+                "percentage": 96.3
+            },
+            {
+                "element": "helium",
+                "percentage": 3.25
+            }
+        ],
+        "description": "Saturno es conocido por sus impresionantes anillos y es el segundo planeta más grande del sistema solar. Tiene una atmósfera compuesta principalmente de hidrógeno y helio y numerosos satélites, incluyendo Titán, el segundo satélite más grande del sistema solar.",
+        "scale": [
+            0.08369987063389392,
+            0.08369987063389392,
+            0.08369987063389392
+        ],
+        "order": 6,
+        "position_z": 63.68,
+        "model3d": "Saturn",
+        "id": 7
+    },
+    {
+        "name": "Urano",
+        "diameter_km": 50724,
+        "average_temperature_celsius": -195,
+        "water_percentage": 0,
+        "number_of_satellites": 27,
+        "satellites": [
+            "Ariel",
+            "Belinda",
+            "Bianca",
+            "Caliban",
+            "Cordelia",
+            "Cressida",
+            "Cupid",
+            "Desdemona",
+            "Ferdinand",
+            "Francisco",
+            "Juliet",
+            "Mab",
+            "Margaret",
+            "Miranda",
+            "Oberon",
+            "Ophelia",
+            "Portia",
+            "Prospero",
+            "Rosalind",
+            "Setebos",
+            "Stephano",
+            "Sycorax",
+            "Titania",
+            "Trinculo",
+            "Umbriel"
+        ],
+        "distance_from_sun_km": 2871000000,
+        "orbital_period_days": 30660,
+        "rotation_period_hours": 17.2,
+        "atmosphere_composition": [
+            {
+                "element": "hydrogen",
+                "percentage": 83
+            },
+            {
+                "element": "helium",
+                "percentage": 15
+            },
+            {
+                "element": "methane",
+                "percentage": 2
+            }
+        ],
+        "description": "Urano es el séptimo planeta del sistema solar y tiene una inclinación axial única, lo que significa que gira de lado. Tiene una atmósfera compuesta de hidrógeno, helio y metano, y posee varios satélites naturales.",
+        "scale": [
+            0.03645536869340233,
+            0.03645536869340233,
+            0.03645536869340233
+        ],
+        "order": 7,
+        "position_z": 127.74,
+        "model3d": "Uranus",
+        "id": 8
+    },
+    {
+        "name": "Neptuno",
+        "diameter_km": 49244,
+        "average_temperature_celsius": -201,
+        "water_percentage": 0,
+        "number_of_satellites": 14,
+        "satellites": [
+            "Despina",
+            "Galatea",
+            "Halimede",
+            "Larissa",
+            "Laomedeia",
+            "Naiad",
+            "Nereid",
+            "Neso",
+            "Psamathe",
+            "Proteus",
+            "Sao",
+            "Thalassa",
+            "Triton"
+        ],
+        "distance_from_sun_km": 4495000000,
+        "orbital_period_days": 60190,
+        "rotation_period_hours": 16.1,
+        "atmosphere_composition": [
+            {
+                "element": "hydrogen",
+                "percentage": 80
+            },
+            {
+                "element": "helium",
+                "percentage": 19
+            },
+            {
+                "element": "methane",
+                "percentage": 1
+            }
+        ],
+        "description": "Neptuno es el octavo y más lejano planeta del sistema solar. Es conocido por sus intensas tormentas y vientos rápidos, y tiene una atmósfera compuesta de hidrógeno, helio y metano. Tritón es su satélite más grande.",
+        "scale": [
+            0.035391691821187295,
+            0.035391691821187295,
+            0.035391691821187295
+        ],
+        "order": 8,
+        "position_z": 200.0,
+        "model3d": "Neptune",
+        "id": 9
+    }
+]
