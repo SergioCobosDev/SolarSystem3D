@@ -7,9 +7,7 @@
 
 import Foundation
 
-protocol JSONInteractor {
-    func loadJSON<JSON>(url: URL, type: JSON.Type) throws -> JSON where JSON: Codable
-}
+protocol JSONInteractor {}
 
 extension JSONInteractor {
     func loadJSON<JSON>(url: URL, type: JSON.Type) throws -> JSON where JSON: Codable {

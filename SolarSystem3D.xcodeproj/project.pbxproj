@@ -20,6 +20,7 @@
 		4B4D83AB2C457AA9006A5436 /* DataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4D83AA2C457AA9006A5436 /* DataTest.swift */; };
 		4B4D83AE2C4581D5006A5436 /* PlanetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4D83AD2C4581D5006A5436 /* PlanetsViewModel.swift */; };
 		4B4D83B02C458D07006A5436 /* PlanetDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4D83AF2C458D07006A5436 /* PlanetDetail.swift */; };
+		4B6DBDEE2C46D691009CF5BD /* SolarSystemPlanets in Frameworks */ = {isa = PBXBuildFile; productRef = 4B6DBDED2C46D691009CF5BD /* SolarSystemPlanets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		4B4D83AA2C457AA9006A5436 /* DataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTest.swift; sourceTree = "<group>"; };
 		4B4D83AD2C4581D5006A5436 /* PlanetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewModel.swift; sourceTree = "<group>"; };
 		4B4D83AF2C458D07006A5436 /* PlanetDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetail.swift; sourceTree = "<group>"; };
+		4B6DBDEB2C46D622009CF5BD /* SolarSystemPlanets */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SolarSystemPlanets; path = "../../Reality Composer Projects/SolarSystemPlanets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B6DBDEE2C46D691009CF5BD /* SolarSystemPlanets in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +60,7 @@
 				4B4D83842C456726006A5436 /* SolarSystem3D */,
 				4B4D83852C456727006A5436 /* Packages */,
 				4B4D83832C456726006A5436 /* Products */,
+				4B6DBDEC2C46D691009CF5BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +91,7 @@
 		4B4D83852C456727006A5436 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				4B6DBDEB2C46D622009CF5BD /* SolarSystemPlanets */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -144,6 +149,13 @@
 			name = ViewModel;
 			sourceTree = "<group>";
 		};
+		4B6DBDEC2C46D691009CF5BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -161,6 +173,7 @@
 			);
 			name = SolarSystem3D;
 			packageProductDependencies = (
+				4B6DBDED2C46D691009CF5BD /* SolarSystemPlanets */,
 			);
 			productName = SolarSystem3D;
 			productReference = 4B4D83822C456726006A5436 /* SolarSystem3D.app */;
@@ -426,6 +439,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4B6DBDED2C46D691009CF5BD /* SolarSystemPlanets */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SolarSystemPlanets;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4B4D837A2C456726006A5436 /* Project object */;
 }

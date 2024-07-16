@@ -29,7 +29,7 @@ extension PlanetModel {
                                   orbitalPeriodDays: 365.25,
                                   rotationPeriodHours: 24,
                                   atmosphereComposition: [
-                                    AtmosphereComposition(element: "element", percentage: 78),
+                                    AtmosphereComposition(element: "nitrogen", percentage: 78),
                                     AtmosphereComposition(element: "oxygen", percentage: 21),
                                     AtmosphereComposition(element: "other", percentage: 1)
                                   ],

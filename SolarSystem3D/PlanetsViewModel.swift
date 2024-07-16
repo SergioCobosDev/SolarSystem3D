@@ -13,7 +13,7 @@ final class PlanetsViewModel {
     
     var planets: [PlanetModel]
     
-    var errorMsg = ""
+    @ObservationIgnored var errorMsg = ""
     var showAlert = false
     
     init(interactor: DataInteractor = Interactor()) {

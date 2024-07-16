@@ -1,8 +1,13 @@
 import Foundation
 
-struct AtmosphereComposition: Codable, Hashable {
+struct AtmosphereComposition: Codable, Identifiable, Hashable {
+    var id: UUID { UUID() }
     let element: String
     let percentage: Double
+    
+    var elementDesc: String {
+        "\(element.capitalized): \(percentage.formatted(.percent.scale(1)))"
+    }
 }
 
 struct PlanetDTO: Codable {
