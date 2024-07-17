@@ -10,13 +10,25 @@ import RealityKit
 import SolarSystemPlanets
 
 struct ContentView: View {
-    @State var planetsVM = PlanetsViewModel()
-    @State private var selectedPlanet: PlanetModel?
+    @Environment(PlanetsViewModel.self) private var planetsVM
+    @Environment(\.openWindow) private var open
+    
     @State private var rotationAngle: Double = 0.0
     
+    @State private var rotate = true
+    @State private var touch = false
+    
+    @State private var currentRotation: CGFloat = 0.0
+    @State private var lastDragValue: CGFloat = 0.0
+    @State private var velocity: CGFloat = 0.0
+    
+    @State var initialScale: CGFloat = 0.6
+    @State private var scaleMagnified: Double = 0.6
+    
     var body: some View {
+        @Bindable var planetBindable = planetsVM
         NavigationSplitView {
-            List(selection: $selectedPlanet) {
+            List(selection: $planetBindable.selectedPlanet) {
                 ForEach(planetsVM.planets) { planet in
                     Text(planet.name)
                         .tag(planet)
@@ -24,41 +36,112 @@ struct ContentView: View {
             }
             .navigationTitle("Planets")
             .navigationSplitViewColumnWidth(200)
+            .toolbar {
+                ToolbarItem(placement: .bottomOrnament) {
+                    HStack(spacing: 30) {
+                        Toggle(isOn: $rotate) {
+                            Image(systemName: "rotate.3d")
+                        }
+                        .disabled(touch)
+                        if let selectedPlanet = planetsVM.selectedPlanet {
+                            Text(selectedPlanet.name)
+                                .frame(width: 100)
+                                .padding(10)
+                                .glassBackgroundEffect()
+                        }
+                        Toggle(isOn: $touch) {
+                            Image(systemName: "hand.point.up.left")
+                        }
+                        .disabled(rotate)
+                        Button {
+                            open(id: "planetDetail")
+                        } label: {
+                            Text("Ver en Detalle")
+                        }
+                    }
+                    .toggleStyle(.button)
+                }
+            }
         } content: {
-            if let selectedPlanet {
+            if let selectedPlanet = planetsVM.selectedPlanet {
                 PlanetDetail(selectedPlanet: selectedPlanet)
-            } else {
-                Text("Select a planet from the list.")
             }
         } detail: {
-            if let selectedPlanet {
+            if let selectedPlanet = planetsVM.selectedPlanet {
                 Model3D(named: selectedPlanet.model3d,
                         bundle: solarSystemPlanetsBundle) { model in
                     model
                         .resizable()
                         .scaledToFit()
-                        .scaleEffect(0.7)
+                        .scaleEffect(scaleMagnified)
+                        .offset(y: -50)
                         .rotation3DEffect(.degrees(rotationAngle),
                                           axis: (x: 0, y: -1, z: 0))
+                        .rotation3DEffect(.degrees(Double(currentRotation)), axis: (x: 0, y: 1, z: 0))
                 } placeholder: {
                     ProgressView()
                 }
+                .gesture(
+                    DragGesture()
+                        .onChanged { value in
+                            let delta = value.translation.width - lastDragValue
+                            velocity = delta / 10
+                            lastDragValue = value.translation.width
+                            if touch {
+                                currentRotation += velocity
+                            }
+                        }
+                        .onEnded { _ in
+                            lastDragValue = 0.0
+                            if touch {
+                                startInertia()
+                            }
+                        }
+                )
+                .gesture(
+                    MagnifyGesture()
+                        .onChanged { value in
+                            let newScale = (1.0 - (value.magnification)) + initialScale
+                            if newScale > 0.4 && newScale < 1.0 {
+                                scaleMagnified = newScale
+                            }
+                        }
+                        .onEnded { value in
+                            initialScale = scaleMagnified
+                        }
+                )
             }
         }
         .onAppear {
             doRotation()
+            planetsVM.selectedPlanet = planetsVM.planets.first
         }
         .alert("App Error",
-               isPresented: $planetsVM.showAlert) {} message: {
+               isPresented: $planetBindable.showAlert) {} message: {
             Text(planetsVM.errorMsg)
         }
     }
     
     func doRotation() {
-        Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true) { _ in
+        let timer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true) { _ in
             let angle = rotationAngle + 0.2
-            rotationAngle = rotationAngle < 360 ? angle : 0
+            if rotate {
+                rotationAngle = rotationAngle < 360 ? angle : 0
+            }
         }
+        RunLoop.current.add(timer, forMode: .common)
+    }
+    
+    func startInertia() {
+        let inertialTimer =  Timer.scheduledTimer(withTimeInterval: 0.016, repeats: true) { timer in
+            if abs(velocity) < 0.01 {
+                timer.invalidate()
+            } else {
+                velocity *= 0.95
+                currentRotation += velocity
+            }
+        }
+        RunLoop.current.add(inertialTimer, forMode: .common)
     }
 }
 

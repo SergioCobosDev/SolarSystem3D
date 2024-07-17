@@ -1,5 +1,40 @@
 [
     {
+    "name": "Sol",
+    "diameter_km": 1391400,
+    "average_temperature_celsius": 5505,
+    "water_percentage": 0,
+    "number_of_satellites": 0,
+    "satellites": [],
+    "distance_from_sun_km": 0,
+    "orbital_period_days": 0,
+    "rotation_period_hours": 609.12,
+    "atmosphere_composition": [
+        {
+            "element": "hydrogen",
+            "percentage": 74.9
+        },
+        {
+            "element": "helium",
+            "percentage": 23.8
+        },
+        {
+            "element": "other",
+            "percentage": 1.3
+        }
+    ],
+    "description": "El Sol es la estrella en el centro del sistema solar y la fuente principal de luz y energía para todos los planetas. Compuesto principalmente de hidrógeno y helio, el Sol es una enorme esfera de plasma que genera energía a través de la fusión nuclear en su núcleo.",
+    "scale": [
+        1.0,
+        1.0,
+        1.0
+    ],
+    "order": 0,
+    "position_z": 0.0,
+    "model3d": "Sun",
+    "id": 1
+},
+    {
         "id": 3,
         "name": "Venus",
         "diameter_km": 12104,

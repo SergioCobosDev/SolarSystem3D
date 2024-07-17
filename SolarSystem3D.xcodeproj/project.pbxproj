@@ -21,6 +21,7 @@
 		4B4D83AE2C4581D5006A5436 /* PlanetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4D83AD2C4581D5006A5436 /* PlanetsViewModel.swift */; };
 		4B4D83B02C458D07006A5436 /* PlanetDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4D83AF2C458D07006A5436 /* PlanetDetail.swift */; };
 		4B6DBDEE2C46D691009CF5BD /* SolarSystemPlanets in Frameworks */ = {isa = PBXBuildFile; productRef = 4B6DBDED2C46D691009CF5BD /* SolarSystemPlanets */; };
+		4BCA90C12C4826E70021081B /* VolumetricPlanet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA90C02C4826E70021081B /* VolumetricPlanet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		4B4D83AD2C4581D5006A5436 /* PlanetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewModel.swift; sourceTree = "<group>"; };
 		4B4D83AF2C458D07006A5436 /* PlanetDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetail.swift; sourceTree = "<group>"; };
 		4B6DBDEB2C46D622009CF5BD /* SolarSystemPlanets */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SolarSystemPlanets; path = "../../Reality Composer Projects/SolarSystemPlanets"; sourceTree = "<group>"; };
+		4BCA90C02C4826E70021081B /* VolumetricPlanet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumetricPlanet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				4B4D83892C456727006A5436 /* SolarSystem3DApp.swift */,
 				4B4D838B2C456727006A5436 /* ContentView.swift */,
 				4B4D83AF2C458D07006A5436 /* PlanetDetail.swift */,
+				4BCA90C02C4826E70021081B /* VolumetricPlanet.swift */,
 				4B4D83AC2C4581C5006A5436 /* ViewModel */,
 				4B4D83A32C4571F4006A5436 /* Interactor */,
 				4B4D839C2C456A28006A5436 /* Model */,
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B4D83A52C45721E006A5436 /* DataInteractor.swift in Sources */,
+				4BCA90C12C4826E70021081B /* VolumetricPlanet.swift in Sources */,
 				4B4D83B02C458D07006A5436 /* PlanetDetail.swift in Sources */,
 				4B4D839E2C456A66006A5436 /* ModelDTO.swift in Sources */,
 				4B4D83A72C4575CE006A5436 /* JSONInteractor.swift in Sources */,

@@ -13,7 +13,8 @@ struct DataTest: DataInteractor {
 
 extension ContentView {
     static var preview: some View {
-        ContentView(planetsVM: PlanetsViewModel(interactor: DataTest()))
+        ContentView()
+            .environment(PlanetsViewModel(interactor: DataTest()))
     }
 }
 
