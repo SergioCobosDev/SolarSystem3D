@@ -1,10 +1,3 @@
-//
-//  PlanetsViewModel.swift
-//  SolarSystem3D
-//
-//  Created by Julio César Fernández Muñoz on 15/7/24.
-//
-
 import SwiftUI
 
 @Observable
@@ -16,6 +9,8 @@ final class PlanetsViewModel {
     
     @ObservationIgnored var errorMsg = ""
     var showAlert = false
+    
+    var showingPlanet = false
     
     init(interactor: DataInteractor = Interactor()) {
         self.interactor = interactor

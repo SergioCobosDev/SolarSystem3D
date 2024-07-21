@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  SolarSystem3D
-//
-//  Created by Julio César Fernández Muñoz on 15/7/24.
-//
-
 import SwiftUI
 import RealityKit
 import SolarSystemPlanets
@@ -13,7 +6,7 @@ struct ContentView: View {
     @Environment(PlanetsViewModel.self) private var planetsVM
     @Environment(\.openWindow) private var open
     
-    @State private var rotationAngle: Double = 0.0
+    @State private var rotationAngle: CGFloat = 0.0
     
     @State private var rotate = true
     @State private var touch = false
@@ -24,6 +17,8 @@ struct ContentView: View {
     
     @State var initialScale: CGFloat = 0.6
     @State private var scaleMagnified: Double = 0.6
+    
+    let retrogradePlanets = ["Venus", "Urano"]
     
     var body: some View {
         @Bindable var planetBindable = planetsVM
@@ -54,10 +49,12 @@ struct ContentView: View {
                         }
                         .disabled(rotate)
                         Button {
+                            planetsVM.showingPlanet = true
                             open(id: "planetDetail")
                         } label: {
                             Text("Ver en Detalle")
                         }
+                        .disabled(planetsVM.showingPlanet)
                     }
                     .toggleStyle(.button)
                 }
@@ -75,8 +72,7 @@ struct ContentView: View {
                         .scaledToFit()
                         .scaleEffect(scaleMagnified)
                         .offset(y: -50)
-                        .rotation3DEffect(.degrees(rotationAngle),
-                                          axis: (x: 0, y: -1, z: 0))
+                        .rotation3DEffect(.degrees(rotationAngle), axis: selectedPlanet.name == "Urano" ? (x: 1, y: 0, z: 0) : (x: 0, y: -1, z: 0))
                         .rotation3DEffect(.degrees(Double(currentRotation)), axis: (x: 0, y: 1, z: 0))
                 } placeholder: {
                     ProgressView()
@@ -124,14 +120,23 @@ struct ContentView: View {
     
     func doRotation() {
         let timer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true) { _ in
-            let angle = rotationAngle + 0.2
+            var angle = rotationAngle - 0.2
+            if let selectedPlanet = planetsVM.selectedPlanet {
+                if retrogradePlanets.contains(selectedPlanet.name) {
+                    angle = rotationAngle + 0.2
+                } else {
+                    angle = rotationAngle - 0.2
+                }
+            } else {
+                angle = rotationAngle - 0.2
+            }
             if rotate {
                 rotationAngle = rotationAngle < 360 ? angle : 0
             }
         }
         RunLoop.current.add(timer, forMode: .common)
     }
-    
+        
     func startInertia() {
         let inertialTimer =  Timer.scheduledTimer(withTimeInterval: 0.016, repeats: true) { timer in
             if abs(velocity) < 0.01 {

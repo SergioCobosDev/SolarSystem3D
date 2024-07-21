@@ -1,10 +1,3 @@
-//
-//  DataTest.swift
-//  SolarSystem3D
-//
-//  Created by Julio César Fernández Muñoz on 15/7/24.
-//
-
 import SwiftUI
 
 struct DataTest: DataInteractor {
