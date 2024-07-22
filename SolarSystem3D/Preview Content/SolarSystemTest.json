@@ -152,5 +152,66 @@
         "order": 4,
         "position_z": 10.14,
         "model3d": "Mars"
+    },
+    {
+        "name": "Urano",
+        "diameter_km": 50724,
+        "average_temperature_celsius": -195,
+        "water_percentage": 0,
+        "number_of_satellites": 27,
+        "satellites": [
+            "Ariel",
+            "Belinda",
+            "Bianca",
+            "Caliban",
+            "Cordelia",
+            "Cressida",
+            "Cupid",
+            "Desdemona",
+            "Ferdinand",
+            "Francisco",
+            "Juliet",
+            "Mab",
+            "Margaret",
+            "Miranda",
+            "Oberon",
+            "Ophelia",
+            "Portia",
+            "Prospero",
+            "Rosalind",
+            "Setebos",
+            "Stephano",
+            "Sycorax",
+            "Titania",
+            "Trinculo",
+            "Umbriel"
+        ],
+        "distance_from_sun_km": 2871000000,
+        "orbital_period_days": 30660,
+        "rotation_period_hours": 17.2,
+        "atmosphere_composition": [
+            {
+                "element": "hydrogen",
+                "percentage": 83
+            },
+            {
+                "element": "helium",
+                "percentage": 15
+            },
+            {
+                "element": "methane",
+                "percentage": 2
+            }
+        ],
+        "description": "Urano es el séptimo planeta del sistema solar y tiene una inclinación axial única, lo que significa que gira de lado. Tiene una atmósfera compuesta de hidrógeno, helio y metano, y posee varios satélites naturales.",
+        "scale": [
+            0.03645536869340233,
+            0.03645536869340233,
+            0.03645536869340233
+        ],
+        "order": 7,
+        "position_z": 127.74,
+        "model3d": "Uranus",
+        "id": 8
     }
 ]

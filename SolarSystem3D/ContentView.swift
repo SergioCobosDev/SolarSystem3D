@@ -15,10 +15,14 @@ struct ContentView: View {
     @State private var lastDragValue: CGFloat = 0.0
     @State private var velocity: CGFloat = 0.0
     
-    @State var initialScale: CGFloat = 0.6
-    @State private var scaleMagnified: Double = 0.6
+    @State var initialScale: CGFloat = 1.0
+    @State private var scaleMagnified: Double = 1.0
     
     let retrogradePlanets = ["Venus", "Urano"]
+    
+    let maxScalePlanets = 0.71
+    let minScalePlanets = 0.3
+    let scaleFactorPlanets = 50.0
     
     var body: some View {
         @Bindable var planetBindable = planetsVM
@@ -71,8 +75,10 @@ struct ContentView: View {
                         .resizable()
                         .scaledToFit()
                         .scaleEffect(scaleMagnified)
+                        .scaleEffect(adjustedScaleForPlanet(named: selectedPlanet.name, originalScale: selectedPlanet.scale))
                         .offset(y: -50)
-                        .rotation3DEffect(.degrees(rotationAngle), axis: selectedPlanet.name == "Urano" ? (x: 1, y: 0, z: 0) : (x: 0, y: -1, z: 0))
+                        .rotation3DEffect(.degrees(selectedPlanet.name == "Urano" ? 90 : rotationAngle), axis: selectedPlanet.name == "Urano" ? (x: 0, y: 0, z: 0) : (x: 0, y: -1, z: 0))
+                        .rotation3DEffect(.degrees(selectedPlanet.name == "Urano" ? rotationAngle : 0), axis: (x: 0, y: 0, z: 1))
                         .rotation3DEffect(.degrees(Double(currentRotation)), axis: (x: 0, y: 1, z: 0))
                 } placeholder: {
                     ProgressView()
@@ -147,6 +153,15 @@ struct ContentView: View {
             }
         }
         RunLoop.current.add(inertialTimer, forMode: .common)
+    }
+    
+    func adjustedScaleForPlanet(named name: String, originalScale: Double) -> CGFloat {
+        if name == "Sol" {
+            return maxScalePlanets
+        } else {
+            let scaledValue = CGFloat(originalScale) * scaleFactorPlanets
+            return min(max(scaledValue, minScalePlanets), maxScalePlanets * 0.8)
+        }
     }
 }
 
